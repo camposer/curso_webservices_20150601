@@ -1,0 +1,26 @@
+Cómo configurar Cliente
+=======================
+
+1.- Validar que hay conexión directa contra el servicio. Una buena idea es colocar en el navegador la URL de éste y validar que se tiene acceso.
+
+2.- Generar el stub. Si trabaja con Apache CXF.
+	- Descomprimir el apache-cxf (el directorio lo llamaremos CXF_HOME)
+	- Añadir la ruta CXF_HOME/bin a la variable de entorno PATH
+	- Añadir la ruta JDK_HOME a la variable de entorno JAVA_HOME
+	- Ejecutar el siguiente comando:
+		C:\RUTA_SRC_PROYECTO\> wsdl2java -client RUTA_WSDL
+
+	Por ejemplo:
+
+		C:\Usuarios\Administrador\workspace\Basico\src\> wsdl2java -client http://localhost:8080/Basico/service/HolaMundoSoap?wsdl
+
+3.- Verificar que fueron creadas las clases de stub (F5 en el Eclipse). Guardan correspondencia con el WSDL
+
+4.- Configurar el fichero de configuración de Spring en el Cliente (puede utilizar como esqueleto el fichero cxf-web.xml)
+
+5.- Agregar el cliente al fichero de configuración. Por ejemplo:
+	<jaxws:client id="holaMundoSoapClient"
+		serviceClass="webservice.HolaMundoSoap"
+		address="http://localhost:8090/Basico/service/HolaMundoSoap" />
+
+6.- Crear una clase cliente que pida a Spring el cliente, por ejemplo: holaMundoSoapClient

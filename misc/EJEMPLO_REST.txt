@@ -1,0 +1,43 @@
+1.- Descargar y descomprimir
+	https://github.com/camposer/curso_extjs_20150518
+2.- Ir con una consola a
+	$CURSO\ejercicio3
+3.- Ejecutar
+	C:$CURSO\ejercicio3> node_64.exe app
+
+4.- Ir al navegador y ejecutar
+	http://localhost:3000/productos
+
+5.- Instalar en el navegador:
+	- Firefox: Rest Client (addon)
+	- Chrome: Advanced Rest Client (plugin) 
+
+6.- Las operaciones:
+	- Consulta
+		GET http://localhost:3000/productos
+	- Consulta uno
+		GET http://localhost:3000/productos/1
+	- Eliminar 
+		DELETE http://localhost:3000/productos/2
+	- Agregar
+		POST http://localhost:3000/productos
+		Header: Content-type: application/json
+		Body:
+		{
+			"nombre": "nuevo",
+			"precio": 3000
+		}
+	- Modificar
+		PUT http://localhost:3000/productos/1
+		Header: Content-type: application/json
+		Body:
+		{
+			"nombre": "cambiado producto 1",
+			"precio": 2000
+		}
+
+
+
+
+
+

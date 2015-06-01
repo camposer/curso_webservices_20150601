@@ -1,0 +1,34 @@
+Repaso HTTP
+===========
+
+- Es un protocolo sin estado
+
+- Es un protocolo de ráfagas (petición - respuesta)
+
+- Los datos viajan en HTTP en paquetes
+
+- Un paquete tiene cabecera y cuerpo
+
+- Las peticiones tienen métodos asociados
+
+- Los métodos son: 
+	- GET - Obtener información
+	- POST - Enviar información (agregar)
+	- PUT - Enviar información (actualizar)
+	- DELETE - Eliminar información
+
+	- HEAD - Sólo la cabecera
+	- TRACE - Para obtener la ruta que atravieza el paquete HTTP
+	- OPTIONS - Qué métodos soporta el servidor
+
+- Cuando las peticiones son GET los parámetros viajan en la URL (query string). Por ejemplo:
+		http://google.com/a?nombre=Rodolfo&apellido=Campos
+
+- Cuando las peticiones son POST o PUT los parámetros viajan en el cuerpo. Por ejemplo:
+		POST http://google.com/a
+		BODY nombre=Rodolfo&apellido=Campos
+
+- Las respuestas tienen un código de estatus, a saber: 1XX (interno), 2XX (success), 3XX (redirect), 4XX (error cliente) y 5XX (error servidor)
+
+
+

@@ -1,0 +1,22 @@
+Ejercicio2
+==========
+
+Configuración del Derby
+1.- Descargar el derby (última versión)
+2.- Descomprimir el fichero bd/personabd.zip del repo dentro de la carpeta DERBY_HOME/bin 
+3.- Iniciar la BD. Ejecutar el script DERBY_HOME/bin/startNetworkServer.bat
+
+Configuración del proyecto
+4.- Descargar el proyecto Persona e importar en el Eclipse
+	File -> Import -> Existing projects into Workspace -> Select archive
+
+Configuración del Web Service
+5.- Crear una SEI que contenga todos los métodos ofrecidos en service.PersonaService
+6.- Crear una implementación de la SEI. Recuerde que Spring gestiona las dependencias, por lo que bastaría con agregar una propiedad de tipo PersonaService a la clase con la anotación @Autowired
+7.- Agregar el proyecto al servidor, iniciar y verficar el WSDL generado
+8.- Probar Web Service con el tester de Eclipse
+
+Creación del cliente
+9.- Cree un cliente de consola que soporte las operaciones de Agregar y Obtener Todos
+10.- Agregue al cliente las operaciones de eliminar, obtener uno y modificar. Fundamental: vea el código fuente y pregunte cualquier cosa que no haya quedado clara.
+

@@ -1,0 +1,13 @@
+RPC - Remote Procedure Call
+SunRPC
+
+RMI - Remote Method Invocation
+Java RMI (JRMI)
+CORBA - Common Request Broker Architecture
+	- Dependía del fabricante
+	- La información viajaba en binario
+	- OMG - Object Management Group (cada fabricante interpretaba como quería)
+
+Servicios Web - Es una especie de RMI
+	- Intercambia ficheros XML sobre HTTP
+	- W3C (regulan el estándar)

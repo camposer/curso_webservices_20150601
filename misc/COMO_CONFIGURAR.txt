@@ -1,0 +1,11 @@
+1.- Instalar JDK 
+	- Descargar JDK de http://java.oracle.com
+
+2.- Instalar Eclipse
+	- Descargar Eclipse para JEE (64 bits) del siguiente enlace:
+		https://www.eclipse.org/downloads/
+
+3.- Instalar Apache CXF
+	- Descargar apache-cxf-3.0.1.zip del siguiente enlace:
+		http://cxf.apache.org/download.html
+

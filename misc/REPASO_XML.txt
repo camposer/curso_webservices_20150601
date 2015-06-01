@@ -1,0 +1,50 @@
+XML
+
+eXtended Markup Language -> SGML
+W3C
+
+<?xml version="1.0" encoding="utf-8" ?>
+<personas>
+	<persona id="1">
+		<nombre>Juan</nombre>
+		<apellido>Pérez</apellido>
+	</persona>
+	<persona id="2" dni="8937647">
+		<nombre>María</nombre>
+		<apellido>García</apellido>
+	</persona>
+</personas>
+
+- XML es autocontenido y autodescriptivo
+- Los documentos XML pueden estar bien formados (well-formed)
+- Un documento que está bien formado es sintácticamente correcto
+- Un documento XML puede ser válido si corresponde con un DTD (Document Type Definition) o XMLSchema (XSD). Es semánticamente correcto.
+- Los DTD son una expresión de Backus-Naur Form
+- Los XMLSchema son bastante más poderosos que los DTD
+- Para validar un documento XML con su DTD o XSD necesito un validador
+- Los parsers (o lectores) permiten leer los ficheros XML
+- Hay 4 tipos de parsers:
+	- DOM - Document Object Model
+	- SAX - Simple API for XML
+	- StaX - Streaming ...
+	- Otro...
+- En Java hay 2 tecnologías avanzadas para la lectura de documentos XML:
+	- JAXP - Java API for XML Parser (DOM en esteroides)
+	- JAXB** - Java API for XML Binding
+		- Marshalling (construir) - XML -> Java
+		- Unmarshalling (deconstruir) - Java -> XML
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

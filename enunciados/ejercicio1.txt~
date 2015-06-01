@@ -1,0 +1,36 @@
+1.- Implementar un servicio web de Calculadora de números decimales (float) que ofrezca las siguientes operaciones:
+
+	float sumar(float a, float b);
+	float restar(float a, float b);
+	float multiplicar(float a, float b);
+	float dividir(float a, float b);
+
+Pasos:
+	- Crear la SEI
+	- Crear la Implementación de la SEI
+	- Configurar el Endpoint en el fichero WEB-INF/cxf-web.xml
+	- Levantar el contenedor web
+	- Probar el servicio (Run -> Web Service Explorer)
+
+NOTA: Basta con agregar las anotaciones @WebService a la SEInterface y el SEImplementation
+
+2.- Implementar un cliente de consola para el servicio web de Calculadora
+
+---
+
+3.- Utilizando anotaciones, alterar el WSDL resultante para cambiar:
+- TargetNamespace del WSDL
+- WebParam
+- OperationName
+- Cambiar y ver la diferencia entre estilo de Binding RPC y Document
+
+---
+
+4.- Instalar y probar la API REST HolaMundo con el RESTClient
+
+5.- Implementar un servicio REST para Calculadora
+
+
+Para probar el cliente REST con AJAX deben ejecutar:
+
+http://localhost:8090/Ejercicio1/calculadora.html

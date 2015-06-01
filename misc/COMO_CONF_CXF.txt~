@@ -1,0 +1,35 @@
+Cómo configurar proyecto CXF
+============================
+
+1.- Configurar dependencias del proyecto. 
+	- cxf-rt-transports-http (CORE)
+	- cxf-rt-frontend-jaxws (SOAP
+	- cxf-rt-frontend-jaxrs (REST)
+	- jackson-rs (Si REST utilizará JSON)
+	- spring-context
+	- spring-mvc
+
+2.- Añadir el filtro y su mapping al web.xml
+	- CXFServlet
+	
+3.- Añadir el ContextLoader de Spring y configurar la ubicación del archivo XML en el web.xml
+
+4.- Definición del endpoint. Dentro del archivo cxf-web.xml añadir endpoint (implementación y dirección)
+
+5.- Definir la interfaz del WebService. Para el endpoint definido anteriormente crear una interfaz anotada como @WebService
+
+6.- Implementar la interfaz del WebService. Crear una clase que implemente la interfaz del WebService anotada con @WebService y que especifice el enpointInterface
+
+7.- Descargar y descomprimir el Tomcat
+
+8.- En la vista de Servers (perspectiva de JEE). Clic en "add new server" y seleccionar la versión de Tomcat correspondiente.
+
+
+
+
+
+
+
+
+
+

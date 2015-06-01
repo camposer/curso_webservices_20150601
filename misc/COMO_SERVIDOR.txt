@@ -1,0 +1,12 @@
+Cómo configurar Servidor
+========================
+
+1.- Crear proyecto Web dinámico
+2.- Configurar las librerías (puede ser con Maven)
+3.- Configurar la librería de Servicios Web en el descriptor de despliegue (web.xml). Por ejemplo: CXFServlet
+4.- Conifgurar el Servicio. Para CXF:
+	- Configurar el fichero de cxf: cxf-web.xml
+	- Implementar la interfaz. Debe tener su anotación @WebService
+	- Implementar el servicio. Debe implementar la interfaz (SEI - Servivce Endpoint Interface) y especificar la anotación @WebService
+5.- Luego levantar el servidor y debería poder acceder al servicio a través de una  URL como:
+	http://localhost:8080/Basico/service/Servicio
