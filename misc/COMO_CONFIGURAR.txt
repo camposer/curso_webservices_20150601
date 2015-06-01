@@ -22,6 +22,12 @@
 
 4.- Clic derecho sobre el proyecto y hacer Maven -> Update project (seleccionar force update)
 
-5.- Clic en Run -> Launch Test Web Services
-	- Iniciar servidor. Previamente debió crear el Server Apache Tomcat y enlazar el proyecto
+5.- Descargar y descomprimir Apache Tomcat 8
+	- En la perspectiva JEE, dentro de la vista Servers. Clic en "add new server" -> Apache Tomcat 8. Seleccionar el lugar donde fue descomprimido y agregar el proyecto basico-cxf
+
+6.- Clic en Run -> Launch Test Web Services
+	- Iniciar servidor (verifique que el proyecto compila sin problemas y ha sido asociado al Tomcat)
 	- Especificar URL: http://localhost:8080/basico-cxf/service/HolaMundoSoap?wsdl
+
+
+
