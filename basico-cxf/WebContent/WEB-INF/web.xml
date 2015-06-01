@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+	<display-name>basico-cxf</display-name>
+
+	<context-param><!-- Fichero de config de Spring -->
+		<param-name>contextConfigLocation</param-name>
+		<param-value>WEB-INF/cxf-web.xml</param-value>
+	</context-param>
+
+	<listener><!-- Listener que carga el contexto de Spring -->
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<servlet><!-- Intérprete de CXF -->
+		<servlet-name>CXFServlet</servlet-name>
+		<servlet-class>org.apache.cxf.transport.servlet.CXFServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping><!-- Mapping de CXF (#1) -->
+		<servlet-name>CXFServlet</servlet-name>
+		<url-pattern>/service/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping><!-- Mapping alternativo de CXF (#2) -->
+		<servlet-name>CXFServlet</servlet-name>
+		<url-pattern>*.ws</url-pattern>
+	</servlet-mapping>
+
+</web-app>
