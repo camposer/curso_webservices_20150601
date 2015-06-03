@@ -1,0 +1,9 @@
+1.- Implementar un servicio web de utilidades de fecha que ofrezca las siguientes operaciones:
+
+	- Dado un año retorna un boolean especificando si es bisiesto o no
+	public Boolean esBisiesto(Date fecha);
+
+	- Dada una fecha retorna el nombre del día correspondiente (lun, mar, mier, jue, vie, sab, dom). Puede utilizar enumerados como tipo de retorno
+	public String getDia(Date fecha);
+
+2.- Implementar el cliente (primero debe generar stubs)
