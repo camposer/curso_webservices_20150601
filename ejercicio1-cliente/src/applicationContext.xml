@@ -1,0 +1,38 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xmlns:jaxrs="http://cxf.apache.org/jaxrs" 
+	xmlns:jaxrs-client="http://cxf.apache.org/jaxrs-client"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd
+http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd
+http://cxf.apache.org/jaxrs http://cxf.apache.org/schemas/jaxrs.xsd
+http://cxf.apache.org/jaxrs-client http://cxf.apache.org/schemas/jaxrs-client.xsd">
+
+	<!-- SOAP -->
+	<jaxws:client id="calculadoraSoapClient" serviceClass="calculator.webservice.CalculadoraSoap"
+		address="http://localhost:1234/ejercicio1/service/CalculadoraSoap" />
+
+	<!-- REST -->
+	<bean id="jsonProvider" class="org.codehaus.jackson.jaxrs.JacksonJsonProvider" />
+
+	<jaxrs-client:client id="calculadoraRestClient" serviceClass="webservice.CalculadoraRest"
+		address="http://localhost:8080/ejercicio1/service/calculadora">
+
+		<jaxrs-client:providers>
+			<ref bean='jsonProvider' />
+		</jaxrs-client:providers>
+	</jaxrs-client:client>
+
+	<jaxrs-client:client id="wuakiRestClient" 
+		serviceClass="webservice.WuakiRest"
+		address="https://api.wuaki.tv">
+
+		<jaxrs-client:providers>
+			<ref bean='jsonProvider' />
+		</jaxrs-client:providers>
+	</jaxrs-client:client>
+
+</beans>

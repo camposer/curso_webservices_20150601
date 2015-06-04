@@ -1,0 +1,78 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script src="javascripts/jquery-1.10.2.js"></script>
+		<script>
+			const URL_BASE = "/ejercicio1/service/calculadora";
+
+			var calcular1 = function() {
+				
+				var req = {
+					operacion: $('#operacion').val(),
+					op1: $('#op1').val(),
+					op2: $('#op2').val(),
+				};
+				
+				$.ajax(URL_BASE, {
+					type: 'POST',
+					data: JSON.stringify(req), // convierte el objeto a string
+					contentType: 'application/json', // tipo del envío
+					dataType: 'json' // tipo de la respuesta
+				}).done(function(respuesta) {
+					$("#respuesta").html(respuesta.result);
+				});
+			};
+
+			var calcular2 = function() {
+				var url = URL_BASE + '/' + 
+					$('#operacion').val() + '/' +
+					$('#op1').val() + '/' +
+					$('#op2').val();
+				
+				$.ajax(url, {
+					type: 'GET',
+					dataType: 'json' // tipo de la respuesta
+				}).done(function(respuesta) {
+					$("#respuesta").html(respuesta.result);
+				});
+			};
+			
+			$(document).ready(function() {
+				//$("#calcular").click(calcular1);
+				$("#calcular").click(calcular2);
+			});
+		</script>
+	</head>
+	<body>
+		<h1>Calculadora</h1>
+		<table>
+			<tr>
+				<td>Operando #1</td>
+				<td>
+					 <input type="text" id="op1" />
+				</td>
+			</tr>
+			<tr>
+				<td>Operando #2</td>
+				<td>
+					 <input type="text" id="op2" />
+				</td>
+			</tr>
+			<tr>
+				<td>Operación</td>
+				<td>
+					<select id="operacion">
+						<option value="sumar">SUMA</option>
+						<option value="restar">RESTA</option>
+						<option value="multiplicar">MULTIPLICACION</option>
+						<option value="dividir">DIVISION</option>
+					</select>
+				</td>
+			</tr>
+		</table>
+		<br>
+		<input type="button" value="calcular" id="calcular"/>
+		<br><br>
+		<div id="respuesta">Respuesta...</div>
+	</body>
+</html>
